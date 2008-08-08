@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<properties>
+		<author email="thiagohp at gmail dot com">
+			Thiago H. de Paula Figueiredo
+		</author>
+		<title>Welcome!</title>
+	</properties>
+	<meta name="keyword"
+		content="java, tapestry, ioc, hibernate, integration, acegi, spring" />
+	<body>
+		<section name="Welcome!">
+			<p>
+				The Ars Machina Project is a collection of Java packages with
+				two general goals:
+				<ul>
+					<li>
+						Provid reusable building blocks (i.e. components,
+						frameworks) that reduce the amount of code needed to
+						implement an application. The consequences are projects
+						being finished faster, with less code, less bugs and
+						more stardardized.
+					</li>
+					<li>
+						Suggest some basic naming and archictecture standards.
+						For example, why don't the Java community have a
+						standard DAO definition, just as we have JPA for
+						object-relational mapping annotations? We can use the
+						same argument for controllers in the business rules
+						tier.
+					</li>
+				</ul>
+			</p>
+		</section>
+		<section name="Packages">
+			<ul>
+				<li>
+					<a href="Generic DAO">
+						<span class="title">Generic DAO</span>
+					</a>
+					Provides some interfaces that define generic DAOs (Data
+					Access Object). This package is completely
+					implementation-independent and has no dependencies.
+				</li>
+				<li>
+					<a href="Generic DAO-hibernate">
+						<span class="title">Generic DAO-Hibernate</span>
+					</a>
+					Implements all methods of Generic DAO interfaces using
+					<a href="http://hibernate.org">Hibernate</a>
+					as ORM framework. It is meant to be used as a superclass for
+					DAO implementations.
+				</li>
+				<li>
+					<a href="generic-controller">
+						<span class="title">Generic Controller</span>
+					</a>
+					Provides some interfaces that define generic controllers
+					(business rules tier) and an implementation of them. This
+					package is completely implementation-independent and has no
+					dependencies except Generic DAO.
+				</li>
+				<li>
+					<a href="generic-controller-spring">
+						<span class="title">Generic Controller-Spring</span>
+					</a>
+					Provides a controller implementation class with transaction
+					management using the
+					<a href="http://springframework.org">Spring Framework</a>
+					and annotations.
+				</li>
+				<li>
+					<a href="generic-authentication">
+						<span class="title">Generic Authentication</span>
+					</a>
+					Provides classes and interfaces that implements a generic
+					authentication module: User, Permission, PermissionGroup,
+					Role. This package is completely implementation-independent
+					and has no dependencies except Generic DAO, Generic
+					Controller and the JPA ORM annotations.
+				</li>
+				<li>
+					<a href="generic-authentication-acegi">
+						<span class="title">Generic Authentication-Acegi</span>
+					</a>
+					Provides some Acegi integration to Generic Authentication,
+					including a ready-to-use
+					<code>UserDetails</code>
+					implementation.
+				</li>
+				<li>
+					<a href="generic-authentication-hibernate">
+						<span class="title">
+							Generic Authentication-Hibernate
+						</span>
+					</a>
+					Implements the Generic Authentication DAOs with Hibernate.
+				</li>
+				<li>
+					<a href="tapestry-crud">
+						<span class="title">Tapestry-CRUD</span>
+					</a>
+					Provides support for creating CRUD (Create, Retrieve,
+					Update, Delete) pages using Tapestry 5, eliminating most
+					of boilerplate code, providing out-of-the-box AJAX support
+					and providing a standard way of implementing CRUDs. This
+					package also adds some concepts not existing in Tapestry 5,
+					such as the activation context encoder.
+				</li>
+				<li>
+					<a href="tapestry-crud-hibernate-validator">
+						<span class="title">
+							Tapestry-CRUD-Hibernate-Validator
+						</span>
+					</a>
+					Adds Hibernate Validator validations into Tapestry-CRUD
+					forms.
+				</li>
+				<li>
+					<a href="example">
+						<span class="title">Ars Machina Example Project</span>
+					</a>
+					A simple Web application meant as an example of
+					all the above packages.
+				</li>
+			</ul>
+		</section>
+		<section name="Why Ars Machina?">
+			<p>
+				As far as I know, Ars Machina is "art of computing" in Latin. I
+				would never claim that this project is art or that it's perfect,
+				but I think that building good software is not just science,
+				technique and good practices, is a little bit of art too.
+				Software development always leaves (sometimes needs) some room
+				for creativity. That's where the art of software development is.
+			</p>
+		</section>
+	</body>
+</document>
