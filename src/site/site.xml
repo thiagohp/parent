@@ -2,16 +2,16 @@
 <project name="The Ars Machina Project">
 	<bannerLeft>
 		<name>The Ars Machina Project</name>
-		<href>http://ars-machina.sourceforge.net/</href>
+		<href>http://www.arsmachina.com.br/project/</href>
 	</bannerLeft>
 	<bannerRight>
 		<name>Hosted by SourceForge</name>
 		<src>http://sourceforge.net/sflogo.php?group_id=196798&amp;type=2</src>
-		<href>http://ars-machina.sourceforge.net/</href>
+		<href>http://www.arsmachina.com.br/project/</href>
 	</bannerRight>
 	<publishDate format="yyyy/MM/dd" />
 	<skin>
-		<groupId>net.sf.arsmachina</groupId>
+		<groupId>br.com.arsmachina</groupId>
 		<artifactId>maven-skin</artifactId>
 		<version>1.0</version>
 	</skin>
@@ -30,6 +30,6 @@
 	</body>
 	<poweredBy>
 		<logo name="Maven" href="http://maven.apache.org/"
-			img="http://maven.apache.org/images/logos/maven-feather.png" />
+			img="http://maven.apache.org/images/logos/maven-button-1.png" />
 	</poweredBy>
 </project>
