@@ -9,9 +9,13 @@
 	<inceptionYear>2008</inceptionYear>
 	<name>Parent Maven 2 project for Ars Machina subprojects</name>
 	<version>0.9</version>
-	<description>The Ars Machina Project is a collection of packages with two general		goals: to reduce the amount of code needed to implement an application
-and to suggest some standards to the software architecture and naming of classes and interfaces.</description>
-	<url>http://www.arsmachina.com.br</url>
+	<description>
+		The Ars Machina Project is a collection of packages with two general
+		goals: to reduce the amount of code needed to implement an application
+		and to suggest some standards to the software architecture and naming of
+		classes and interfaces.
+	</description>
+	<url>http://www.arsmachina.com.br/project</url>
 	<modules> 
 		<module>../generic-dao</module><!--
 		<module>../generic-dao-hibernate</module>
@@ -57,7 +61,7 @@ and to suggest some standards to the software architecture and naming of classes
 			<id>thiagohp</id>
 			<name>Thiago H. de Paula Figueiredo (Thiago HP)</name>
 			<email>thiagohp@users.sourceforge.net</email>
-			<url>http://thiagohp.blogspot.com</url>
+			<url>http://www.arsmachina.com.br/thiago</url>
 			<roles>
 				<role>Creator</role>
 				<role>Developer</role>
@@ -80,7 +84,22 @@ and to suggest some standards to the software architecture and naming of classes
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
+				<artifactId>tapestry-access-logger</artifactId>
+				<version>0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
 				<artifactId>generic-authentication-acegi</artifactId>
+				<version>0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>tapestry-access-logger</artifactId>
+				<version>0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>tapestry-access-logger-hibernate</artifactId>
 				<version>0.9</version>
 			</dependency>
 			<dependency>
@@ -395,6 +414,11 @@ and to suggest some standards to the software architecture and naming of classes
 				<artifactId>aspectjweaver</artifactId>
 				<version>1.5.4</version>
 			</dependency>
+			<dependency>
+			    <groupId>postgresql</groupId>
+			    <artifactId>postgresql</artifactId>
+			    <version>8.3-603.jdbc4</version>
+			</dependency>			
 		</dependencies>
 	</dependencyManagement>
 	<build>
@@ -477,10 +501,6 @@ and to suggest some standards to the software architecture and naming of classes
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jxr-plugin</artifactId>
-			</plugin>
-			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<executions>
@@ -497,66 +517,74 @@ and to suggest some standards to the software architecture and naming of classes
 	</build>
 	<reporting>
 		<plugins>
-			<!--
-				<plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<linkJavadoc>true</linkJavadoc>
+					<javadocDir>./apidocs</javadocDir>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				</plugin>
-				<plugin>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clover-plugin</artifactId>
-				</plugin>
-				<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				</plugin>
-				<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jxr-maven-plugin</artifactId>
-				</plugin>
-				<plugin>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<configuration>
-				<linksource>true</linksource>
-				<links>
-				<link>http://java.sun.com/j2se/1.5.0/docs/api/</link>
-				<link>http://java.sun.com/j2ee/1.4/docs/api/</link>
-				<link>http://commons.apache.org/logging/apidocs/</link>
-				<link>
-				http://www.acegisecurity.org/multiproject/acegi-security/apidocs/
-				</link>
-				<link>
-				http://tapestry.apache.org/tapestry5/tapestry-core/apidocs/
-				</link>
-				<link>
-				http://tapestry.apache.org/tapestry5/tapestry-ioc/apidocs/
-				</link>
-				</links>
+					<linksource>true</linksource>
+					<links>
+						<link>
+							http://java.sun.com/j2se/1.5.0/docs/api/
+						</link>
+						<link>
+							http://www.acegisecurity.org/multiproject/acegi-security/apidocs/
+						</link>
+						<link>
+							http://tapestry.apache.org/tapestry5/tapestry-core/apidocs/
+						</link>
+						<link>
+							http://tapestry.apache.org/tapestry5/tapestry-ioc/apidocs/
+						</link>
+						<link>
+							http://tapestry.apache.org/tapestry5/tapestry-annotations/apidocs/
+						</link>
+					</links>
 				</configuration>
-				</plugin>
-				<plugin>
+			</plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
-				</plugin>
-				<plugin>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.1</version>
 				<reportSets>
-				<reportSet>
-				<reports>
-				<report>dependencies</report>
-				<report>license</report>
-				<report>scm</report>
-				<report>project-team</report>
-				</reports>
-				</reportSet>
+					<reportSet>
+						<reports>
+							<report>dependencies</report>
+							<report>license</report>
+							<report>scm</report>
+							<report>project-team</report>
+						</reports>
+					</reportSet>
 				</reportSets>
-				</plugin>
-			-->
+			</plugin>
 		</plugins>
 	</reporting>
 	<repositories>
+		<repository>
+			<id>maven</id>
+			<name>Maven</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
 		<!-- 
 		<repository>
 			<id>tapestry-snapshot</id>
