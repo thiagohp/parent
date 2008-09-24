@@ -17,7 +17,7 @@
 	</description>
 	<url>http://www.arsmachina.com.br/project</url>
 	<modules> 
-		<module>../generic-dao</module><!--
+		<module>../generic-dao</module>
 		<module>../generic-dao-hibernate</module>
 		<module>../generic-controller</module>
 		<module>../generic-controller-spring</module>
@@ -25,11 +25,13 @@
 		<module>../generic-authentication-acegi</module>
 		<module>../generic-authentication-hibernate</module>
 		<module>../tapestry-crud</module>
-		<module>../tapestry-crud-hibernate-validator</module>-->
+		<module>../tapestry-crud-hibernate-validator</module>
+		<module>../tapestry-access-logger</module>
+		<module>../tapestry-access-logger-hibernate</module>
 	</modules>
 	<organization>
-		<name>Thiago H. de Paula Figueiredo (ThiagoHP)</name>
-		<url>http://www.arsmachina.com.br/thiagohp</url>
+		<name>Thiago H. de Paula Figueiredo (Thiago HP)</name>
+		<url>http://www.arsmachina.com.br/thiago</url>
 	</organization>
 	<licenses>
 		<license>
@@ -400,6 +402,11 @@
 				<version>1.0</version>
 			</dependency>
 			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.4</version>
+			</dependency>
+			<dependency>
 				<groupId>c3p0</groupId>
 				<artifactId>c3p0</artifactId>
 				<version>0.9.1.2</version>
@@ -480,8 +487,8 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<!-- <version>2.0.4</version>-->
-				<version>LATEST</version>
+				<version>2.0.4</version>
+				<!-- <version>LATEST</version> -->
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -587,6 +594,11 @@
 		</repository>
 		<!-- 
 		<repository>
+			<id>jboss</id>
+			<name>JBoss (and Hibernate)</name>
+			<url>http://repository.jboss.org/maven2/</url>
+		</repository>
+		<repository>
 			<id>tapestry-snapshot</id>
 			<name>Tapestry Snapshots</name>
 			<url>http://tapestry.formos.com/maven-snapshot-repository</url>
@@ -659,6 +671,6 @@
 	</distributionManagement>
 	<properties>
 		<spring-release-version>2.5.5</spring-release-version>
-		<tapestry-release-version>5.0.14</tapestry-release-version>
+		<tapestry-release-version>5.0.15</tapestry-release-version>
 	</properties>
 </project>
