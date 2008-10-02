@@ -7,7 +7,7 @@
 	<bannerRight>
 		<name>Hosted by SourceForge</name>
 		<src>http://sourceforge.net/sflogo.php?group_id=196798&amp;type=2</src>
-		<href>http://www.arsmachina.com.br/project/</href>
+		<href>http://sourceforge.net/</href>
 	</bannerRight>
 	<publishDate format="yyyy/MM/dd" />
 	<skin>
@@ -21,12 +21,15 @@
 			<item name="Spring Framework" href="http://springframework.org" />
 			<item name="Hibernate" href="http://hibernate.org" />
 		</links>
+		<menu name="The Ars Machina Project" inherit="top">
+			<item name="Introduction" href="http://www.arsmachina.com.br/project" />
+		</menu>
 		<menu ref="modules" inherit="bottom"/>
 		<menu name="Hosted by SourceForge" inherit="bottom">
 			<item name="Project page"
 				href="https://sourceforge.net/projects/ars-machina/" />
 		</menu>
-		<menu ref="reports" />
+		<menu ref="reports" inherit="bottom"/>
 	</body>
 	<poweredBy>
 		<logo name="Maven" href="http://maven.apache.org/"
