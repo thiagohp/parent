@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>
 	<inceptionYear>2008</inceptionYear>
 	<name>Parent Maven 2 project for Ars Machina subprojects</name>
-	<version>0.9</version>
+	<version>1.0</version>
 	<description>
 		The Ars Machina Project is a collection of packages with two general
 		goals: to reduce the amount of code needed to implement an application
@@ -29,6 +29,7 @@
 		<module>../tapestry-access-logger</module>
 		<module>../tapestry-access-logger-hibernate</module>
 		<module>../example</module>
+		<!-- <module>../brasil</module>-->
 		<module>../site</module>
 	</modules>
 	<organization>
@@ -88,6 +89,11 @@
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
+				<artifactId>brasil</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
 				<artifactId>tapestry-access-logger</artifactId>
 				<version>0.9</version>
 			</dependency>
@@ -124,17 +130,12 @@
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
 				<artifactId>generic-dao-hibernate</artifactId>
-				<version>0.9</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-service</artifactId>
-				<version>0.9</version>
+				<version>1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
 				<artifactId>generic-controller</artifactId>
-				<version>0.9</version>
+				<version>1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
@@ -210,7 +211,7 @@
 			<dependency>
 				<groupId>org.springframework.javaconfig</groupId>
 				<artifactId>spring-javaconfig</artifactId>
-				<version>1.0.0.m4-SNAPSHOT</version>
+				<version>1.0.0.m3</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -575,7 +576,6 @@
 			<name>Maven</name>
 			<url>http://repo1.maven.org/maven2</url>
 		</repository>
-		<!-- 
 		<repository>
 			<id>jboss</id>
 			<name>JBoss (and Hibernate)</name>
@@ -591,12 +591,12 @@
 		</repository>
 		<repository>
 			<id>spring-milestone</id>
-			<name>Spring Milestones</name>
+			<name>Spring Milestone Repository</name>
 			<url>
-				https://s3.amazonaws.com/maven.springframework.org/milestone
+				http://s3.amazonaws.com/maven.springframework.org/milestone
 			</url>
 			<snapshots>
-				<enabled>false</enabled>
+				<enabled>true</enabled>
 			</snapshots>
 		</repository>
 		<repository>
@@ -620,13 +620,15 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>localhost.nu</id>
-			<url>http://www.localhost.nu/java/mvn</url>
+			<id>
+				SpringSource Enterprise Bundle Repository - External Bundle
+				Releases
+			</id>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
 			<snapshots>
-				<enabled>false</enabled>
+				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-		-->
 		<repository>
 			<id>localhost.nu</id>
 			<url>http://www.localhost.nu/java/mvn</url>
@@ -654,6 +656,6 @@
 	</distributionManagement>
 	<properties>
 		<spring-release-version>2.5.5</spring-release-version>
-		<tapestry-release-version>5.0.15</tapestry-release-version>
+		<tapestry-release-version>5.0.16-SNAPSHOT</tapestry-release-version>
 	</properties>
 </project>
