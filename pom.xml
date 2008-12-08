@@ -30,6 +30,10 @@
 		<module>../tapestry-access-logger-hibernate</module>
 		<module>../brasil</module>
 		<module>../mailer</module>
+		<module>../tapestry-crud-hibernate</module>
+		<module>../validators</module>
+		<module>../esculentus</module>
+		<module>../colloquium</module>
 		<!-- <module>../example</module>-->
 		<!-- <module>../site</module>-->
 	</modules>
@@ -86,11 +90,26 @@
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
 				<artifactId>mailer</artifactId>
-				<version>0.9</version>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>tapestry-crud-hibernate	</artifactId>
+				<version>1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
 				<artifactId>generic-authentication</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>colloquium</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>esculentus</artifactId>
 				<version>1.0</version>
 			</dependency>
 			<dependency>
@@ -159,6 +178,11 @@
 				<version>1.0</version>
 			</dependency>
 			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>validators</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
 				<groupId>org.apache.tapestry</groupId>
 				<artifactId>tapestry-core</artifactId>
 				<version>${tapestry-release-version}</version>
@@ -180,24 +204,18 @@
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate</artifactId>
-				<version>3.2.6.ga</version>
-				<exclusions>
-					<exclusion>
-						<groupId>cglib</groupId>
-						<artifactId>cglib</artifactId>
-					</exclusion>
-				</exclusions>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.3.1.GA</version>
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-annotations</artifactId>
-				<version>3.3.0.ga</version>
+				<version>3.4.0.GA</version>
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-commons-annotations</artifactId>
-				<version>3.3.0.ga</version>
+				<version>3.3.0.GA</version>
 			</dependency>
 			<dependency>
 				<groupId>cglib</groupId>
@@ -207,7 +225,7 @@
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-validator</artifactId>
-				<version>3.0.0.ga</version>
+				<version>3.1.0.ga</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -217,7 +235,7 @@
 			<dependency>
 				<groupId>org.springframework.javaconfig</groupId>
 				<artifactId>spring-javaconfig</artifactId>
-				<version>1.0.0.m3</version>
+				<version>1.0.0.M3</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -587,54 +605,25 @@
 			<name>JBoss (and Hibernate)</name>
 			<url>http://repository.jboss.org/maven2/</url>
 		</repository>
+		<!-- 
 		<repository>
-			<id>tapestry-snapshot</id>
-			<name>Tapestry Snapshots</name>
-			<url>http://tapestry.formos.com/maven-snapshot-repository</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>spring-milestone</id>
-			<name>Spring Milestone Repository</name>
-			<url>
-				http://s3.amazonaws.com/maven.springframework.org/milestone
-			</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>spring-release</id>
-			<name>Spring Releases</name>
-			<url>
-				https://s3.amazonaws.com/maven.springframework.org/release
-			</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>spring-snapshot</id>
-			<name>Spring Snapshots</name>
-			<url>
-				https://s3.amazonaws.com/maven.springframework.org/snapshot
-			</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>
-				SpringSource Enterprise Bundle Repository - External Bundle
+			<id>com.springsource.repository.bundles.milestone</id>
+			<name>
+				SpringSource Enterprise Bundle Repository - SpringSource
 				Releases
-			</id>
-			<url>http://repository.springsource.com/maven/bundles/external</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+			</name>
+			<url>
+				http://repository.springsource.com/maven/bundles/release
+			</url>
 		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>
+				SpringSource Enterprise Bundle Repository - External Releases
+			</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		-->
 		<repository>
 			<id>localhost.nu</id>
 			<url>http://www.localhost.nu/java/mvn</url>
@@ -662,6 +651,6 @@
 	</distributionManagement>
 	<properties>
 		<spring-release-version>2.5.5</spring-release-version>
-		<tapestry-release-version>5.0.16-SNAPSHOT</tapestry-release-version>
+		<tapestry-release-version>5.0.17</tapestry-release-version>
 	</properties>
 </project>
