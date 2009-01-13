@@ -33,13 +33,14 @@
 		<module>../tapestry-access-logger-hibernate</module>
 		<module>../mailer</module>
 		<module>../tapestry-crud-hibernate</module>
+		<module>../example</module>
+		<module>../site</module>
 		<!-- 
 		<module>../brasil</module>
 		<module>../validators</module>
 		<module>../esculentus</module>
 		<module>../colloquium</module>
-		<module>../example</module>
-		<module>../site</module>-->
+		-->
 	</modules>
 	<organization>
 		<name>Thiago H. de Paula Figueiredo</name>
