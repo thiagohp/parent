@@ -20,22 +20,26 @@
 		<module>../generic-dao</module>
 		<module>../generic-dao-hibernate</module>
 		<module>../generic-controller</module>
+		<module>../application-module</module>
+		<module>../application-module-hibernate</module>
 		<module>../generic-controller-spring</module>
+		<module>../application-module-spring</module>
 		<module>../generic-authentication</module>
-		<module>../generic-authentication-acegi</module>
 		<module>../generic-authentication-hibernate</module>
+		<module>../generic-authentication-module</module>
 		<module>../tapestry-crud</module>
 		<module>../tapestry-spring-security-generic-authentication</module>
 		<module>../tapestry-access-logger</module>
 		<module>../tapestry-access-logger-hibernate</module>
-		<module>../brasil</module>
 		<module>../mailer</module>
 		<module>../tapestry-crud-hibernate</module>
+		<!-- 
+		<module>../brasil</module>
 		<module>../validators</module>
 		<module>../esculentus</module>
 		<module>../colloquium</module>
-		<!-- <module>../example</module>-->
-		<!-- <module>../site</module>-->
+		<module>../example</module>
+		<module>../site</module>-->
 	</modules>
 	<organization>
 		<name>Thiago H. de Paula Figueiredo</name>
@@ -94,6 +98,26 @@
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
+				<artifactId>generic-authentication-module</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>application-module-hibernate</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>application-module-spring</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>application-module</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
 				<artifactId>tapestry-crud-hibernate	</artifactId>
 				<version>1.0</version>
 			</dependency>
@@ -140,7 +164,7 @@
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
 				<artifactId>tapestry-spring-security-generic-authentication</artifactId>
-				<version>0.9</version>
+				<version>1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
@@ -180,7 +204,7 @@
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
 				<artifactId>validators</artifactId>
-				<version>1.0-SNAPSHOT</version>
+				<version>1.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.tapestry</groupId>
@@ -650,7 +674,7 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<properties>
-		<spring-release-version>2.5.5</spring-release-version>
-		<tapestry-release-version>5.0.17</tapestry-release-version>
+		<spring-release-version>2.5.6</spring-release-version>
+		<tapestry-release-version>5.0.18</tapestry-release-version>
 	</properties>
 </project>
