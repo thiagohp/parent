@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<inceptionYear>2008</inceptionYear>
 	<name>Parent Maven 2 project for Ars Machina subprojects</name>
-	<version>1.2.3</version>
+	<version>1.2.4-SNAPSHOT</version>
 	<description>
 		The Ars Machina Project is a collection of packages with two
 		general goals: to reduce the amount of code needed to implement an application
