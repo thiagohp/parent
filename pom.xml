@@ -20,7 +20,7 @@
 	</description>
 	<url>http://www.arsmachina.com.br/project</url>
 	<modules>
-<!--		<module>../generic-dao</module>-->
+<!--		<module>../generic-dao</module> -->
 <!--		<module>../generic-dao-hibernate</module>-->
 <!--		<module>../generic-controller</module>-->
 <!--		<module>../application-module</module>-->
