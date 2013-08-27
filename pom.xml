@@ -6,11 +6,13 @@
 	<packaging>pom</packaging>
 	<inceptionYear>2008</inceptionYear>
 	<name>Parent Maven 2 project for Ars Machina subprojects</name>
-	<version>1.2.3</version>
-	<description> The Ars Machina Project is a collection of packages with two
+	<version>1.2.3-SNAPSHOT</version>
+	<description>
+		The Ars Machina Project is a collection of packages with two
 		general goals: to reduce the amount of code needed to implement an application
 		and to suggest some standards to the software architecture and naming of
-		classes and interfaces. </description>
+		classes and interfaces. 
+	</description>
 	<url>http://www.arsmachina.com.br/project</url>
 	<modules>
 <!--		<module>../generic-dao</module>-->
