@@ -314,11 +314,6 @@
 				<version>2.1_3</version>
 			</dependency>
 			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-validator</artifactId>
-				<version>3.1.0.GA</version>
-			</dependency>
-			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
 				<version>${spring-release-version}</version>
@@ -605,8 +600,9 @@
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-validator-annotation-processor</artifactId>
-				<version>5.0.1.Final</version>
+				<artifactId>hibernate-validator</artifactId>
+<!-- 				<version>5.0.1.Final</version> -->
+				<version>4.0.0.GA</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -782,7 +778,7 @@
 <!-- 	</distributionManagement> -->
 	<properties>
 		<spring-release-version>2.5.6</spring-release-version>
-		<tapestry-release-version>5.4-alpha-14</tapestry-release-version>
+		<tapestry-release-version>5.4-alpha-20</tapestry-release-version>
 		<logback-release-version>1.0.13</logback-release-version>
 	</properties>
 </project>
