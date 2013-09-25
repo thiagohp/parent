@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<inceptionYear>2008</inceptionYear>
 	<name>Parent Maven 2 project for Ars Machina subprojects</name>
-	<version>1.2.11</version>
+	<version>1.2.11-SNAPSHOT</version>
 	<parent>
 	    <groupId>org.sonatype.oss</groupId>
 	    <artifactId>oss-parent</artifactId>
