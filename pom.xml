@@ -48,8 +48,8 @@
 		-->
 	</modules>
 	<organization>
-		<name>Thiago H. de Paula Figueiredo</name>
-		<url>http://www.arsmachina.com.br/thiago</url>
+		<name>Ars Machina Tecnologia da Informação Ltda.</name>
+		<url>http://arsmachina.com.br</url>
 	</organization>
 	<licenses>
 		<license>
@@ -98,13 +98,28 @@
 			<dependency>
 				<groupId>org.easymock</groupId>
 				<artifactId>easymock</artifactId>
-				<version>2.3</version>
+				<version>3.2</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
 				<artifactId>mailer</artifactId>
 				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>tapestry-url-rewriter</artifactId>
+				<version>2.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>tapestry-syntax-highlighter</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.arsmachina</groupId>
+				<artifactId>tapestry-wymeditor</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>br.com.arsmachina</groupId>
@@ -778,7 +793,7 @@
 <!-- 	</distributionManagement> -->
 	<properties>
 		<spring-release-version>2.5.6</spring-release-version>
-		<tapestry-release-version>5.4-alpha-20</tapestry-release-version>
+		<tapestry-release-version>5.4-alpha-22</tapestry-release-version>
 		<logback-release-version>1.0.13</logback-release-version>
 	</properties>
 </project>
