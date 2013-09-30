@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<inceptionYear>2008</inceptionYear>
 	<name>Parent Maven 2 project for Ars Machina subprojects</name>
-	<version>1.2.12</version>
+	<version>1.2.12-SNAPSHOT</version>
 	<parent>
 	    <groupId>org.sonatype.oss</groupId>
 	    <artifactId>oss-parent</artifactId>
@@ -297,12 +297,6 @@
 				<artifactId>hibernate-commons-annotations</artifactId>
 				<version>3.0.0.ga</version>
 			</dependency>
-			<dependency>
-        		<groupId>com.spreadthesource</groupId>
-        		<artifactId>tapestry5-rome</artifactId>
-        		<version>1.1</version>		
-			</dependency>
-			
 <!--			<dependency>-->
 <!--				<groupId>org.hibernate</groupId>-->
 <!--				<artifactId>hibernate-annotations</artifactId>-->
