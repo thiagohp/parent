@@ -509,6 +509,26 @@
 				<version>0.5.1</version>
 			</dependency>
 			<dependency>
+				<groupId>org.tynamo.security</groupId>
+				<artifactId>tynamo-federatedaccounts-core</artifactId>
+				<version>${tynamo-federated-accounts-release-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.tynamo.security</groupId>
+				<artifactId>tynamo-federatedaccounts-facebook</artifactId>
+				<version>${tynamo-federated-accounts-release-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.tynamo.security</groupId>
+				<artifactId>tynamo-federatedaccounts-twitter</artifactId>
+				<version>${tynamo-federated-accounts-release-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.tynamo.security</groupId>
+				<artifactId>tynamo-federatedaccounts-pac4jbasedoauth</artifactId>
+				<version>${tynamo-federated-accounts-release-version}</version>
+			</dependency>
+			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-core</artifactId>
 				<version>${logback-release-version}</version>
@@ -713,8 +733,9 @@
 <!-- 	</distributionManagement> -->
 	<properties>
 		<spring-release-version>2.5.6</spring-release-version>
-		<tapestry-release-version>5.4-alpha-22</tapestry-release-version>
+		<tapestry-release-version>5.4-alpha-29</tapestry-release-version>
 		<logback-release-version>1.0.13</logback-release-version>
 		<jcache-release-version>0.8</jcache-release-version>
+		<tynamo-federated-accounts-release-version>0.4.5</tynamo-federated-accounts-release-version>
 	</properties>
 </project>
