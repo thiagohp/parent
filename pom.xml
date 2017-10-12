@@ -1,741 +1,926 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.arsmachina</groupId>
-	<artifactId>parent</artifactId>
-	<packaging>pom</packaging>
-	<inceptionYear>2008</inceptionYear>
-	<name>Parent Maven 2 project for Ars Machina subprojects</name>
-	<version>1.2.16-SNAPSHOT</version>
-	<parent>
-	    <groupId>org.sonatype.oss</groupId>
-	    <artifactId>oss-parent</artifactId>
-	    <version>7</version>
-	  </parent>	
-	<description>
-		The Ars Machina Project is a collection of packages with two
-		general goals: to reduce the amount of code needed to implement an application
-		and to suggest some standards to the software architecture and naming of
-		classes and interfaces. 
-	</description>
-	<url>http://www.arsmachina.com.br/project</url>
-	<modules>
-<!--		<module>../generic-dao</module> -->
-<!--		<module>../generic-dao-hibernate</module>-->
-<!--		<module>../generic-controller</module>-->
-<!--		<module>../application-module</module>-->
-<!--		<module>../application-module-hibernate</module>-->
-<!--		<module>../generic-controller-spring</module>-->
-<!--		<module>../application-module-spring</module>-->
-<!--		<module>../generic-authentication</module>-->
-<!--		<module>../generic-authentication-hibernate</module>-->
-<!--		<module>../generic-authentication-module</module>-->
-<!--		<module>../generic-authorization</module>-->
-<!--		<module>../generic-authorization-tapestry-ioc</module>-->
-<!--		<module>../tapestry-crud</module>-->
-<!--		<module>../mailer</module>-->
-<!--		<module>../image</module>-->
-<!--		<module>../brasil</module>-->
-<!--		<module>../brasil-tapestry</module>-->
-<!--		<module>../tapestry-crud-hibernate-validator</module>-->
-<!--		<module>../tapestry-access-logger</module>-->
-<!--		<module>../tapestry-access-logger-hibernate</module>-->
-<!--		<module>../tapestry-crud-hibernate</module>-->
-<!--		<module>../validators</module>-->
-<!--		<module>../tapestry-security</module>-->
-		<!--
-		<module>../example</module>
-		-->
-	</modules>
-	<organization>
-		<name>Ars Machina Tecnologia da Informação Ltda.</name>
-		<url>http://arsmachina.com.br</url>
-	</organization>
-	<licenses>
-		<license>
-			<name>Apache Software License 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<scm>
-		<connection>scm:git:https://github.com/thiagohp/parent.git</connection>
-	    <developerConnection>scm:git:https://github.com/thiagohp/parent.git</developerConnection>
-	    <url>https://github.com/thiagohp/parent.git</url>	
-	</scm>
-<!-- 	<mailingLists> -->
-<!-- 		<mailingList> -->
-<!-- 			<name /> -->
-<!-- 			<subscribe /> -->
-<!-- 			<unsubscribe /> -->
-<!-- 			<post /> -->
-<!-- 			<archive>http://sourceforge.net/mailarchive/forum.php?forum_name=ars-machina-users</archive> -->
-<!-- 		</mailingList> -->
-<!-- 	</mailingLists> -->
-	<issueManagement>
-		<url>https://github.com/thiagohp/parent/issues</url>
-	</issueManagement>
-	<developers>
-		<developer>
-			<id>thiagohp</id>
-			<name>Thiago H. de Paula Figueiredo</name>
-			<email>thiagohp at gmail dot com</email>
-			<url>http://www.arsmachina.com.br/thiago</url>
-			<roles>
-				<role>Creator</role>
-				<role>Developer</role>
-			</roles>
-			<timezone>GMT-3</timezone>
-		</developer>
-	</developers>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.freemarker</groupId>
-				<artifactId>freemarker</artifactId>
-				<version>2.3.14</version>
-			</dependency>
-			<dependency>
-				<groupId>org.easymock</groupId>
-				<artifactId>easymock</artifactId>
-				<version>3.2</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>mailer</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-url-rewriter</artifactId>
-				<version>2.0.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-syntax-highlighter</artifactId>
-				<version>0.0.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-wymeditor</artifactId>
-				<version>0.1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-rss</artifactId>
-				<version>0.0.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-authentication-module</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>application-module-hibernate</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>application-module-spring</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>application-module</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-authentication</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>colloquium</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>esculentus</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>brasil</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>brasil-tapestry</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-access-logger</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-access-logger-hibernate</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-spring-security-generic-authentication</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-authentication-hibernate</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-dao</artifactId>
-				<version>2.0.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-dao-hibernate</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-controller</artifactId>
-				<version>2.0.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-controller-spring</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-crud</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-crud-hibernate-validator</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>validators</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.chenillekit</groupId>
-				<artifactId>chenillekit-tapestry</artifactId>
-				<version>1.1.0</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.apache.tapestry</groupId>
-						<artifactId>tapestry-core</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>ognl</groupId>
-						<artifactId>ognl</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.chenillekit</groupId>
-				<artifactId>chenillekit-quartz</artifactId>
-				<version>1.1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry-core</artifactId>
-				<version>${tapestry-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry-mongodb</artifactId>
-				<version>${tapestry-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry-upload</artifactId>
-				<version>${tapestry-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry-ioc</artifactId>
-				<version>${tapestry-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry5-annotations</artifactId>
-				<version>${tapestry-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry-beanvalidator</artifactId>
-				<version>${tapestry-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tapestry</groupId>
-				<artifactId>tapestry-spring</artifactId>
-				<version>5.0.18</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-core</artifactId>
-				<version>3.6.0.Final</version>
-				<exclusions>
-					<exclusion>
-						<groupId>net.sf.ehcache</groupId>
-						<artifactId>ehcache</artifactId>
-					</exclusion>
-				</exclusions>				
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-commons-annotations</artifactId>
-				<version>3.0.0.ga</version>
-			</dependency>
-<!--			<dependency>-->
-<!--				<groupId>org.hibernate</groupId>-->
-<!--				<artifactId>hibernate-annotations</artifactId>-->
-<!--				<version>3.4.0.GA</version>-->
-<!--				<exclusions>-->
-<!--					<exclusion>-->
-<!--						<groupId>org.slf4j</groupId>-->
-<!--						<artifactId>slf4j-api</artifactId>-->
-<!--					</exclusion>-->
-<!--				</exclusions>-->
-<!--			</dependency>-->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-simple</artifactId>
-				<version>1.5.2</version>
-			</dependency>				
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-commons-annotations</artifactId>
-				<version>3.3.0.ga</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.hibernate</groupId>
-						<artifactId>hibernate</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.hibernate</groupId>
-						<artifactId>hibernate-core</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>cglib</groupId>
-				<artifactId>cglib-nodep</artifactId>
-				<version>2.1_3</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-				<version>${spring-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.javaconfig</groupId>
-				<artifactId>spring-javaconfig</artifactId>
-				<version>1.0.0.m3</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-tx</artifactId>
-				<version>${spring-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-beans</artifactId>
-				<version>${spring-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-aop</artifactId>
-				<version>${spring-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>${spring-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-dao</artifactId>
-				<version>2.0.8</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-hibernate3</artifactId>
-				<version>2.0.8</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.hibernate</groupId>
-						<artifactId>hibernate</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-orm</artifactId>
-				<version>${spring-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-web</artifactId>
-				<version>${spring-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>nu.localhost.tapestry</groupId>
-				<artifactId>tapestry5-acegi</artifactId>
-				<version>1.1.1-SNAPSHOT</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.apache.tapestry</groupId>
-						<artifactId>tapestry-ioc</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.apache.tapestry</groupId>
-						<artifactId>tapestry-core</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.acegisecurity</groupId>
-						<artifactId>acegi-security</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.springframework</groupId>
-						<artifactId>spring-context</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.acegisecurity</groupId>
-						<artifactId>acegi-security-tiger</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.testng</groupId>
-				<artifactId>testng</artifactId>
-				<version>5.5</version>
-				<classifier>jdk15</classifier>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>hsqldb</groupId>
-				<artifactId>hsqldb</artifactId>
-				<version>1.8.0.7</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.persistence</groupId>
-				<artifactId>persistence-api</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>servlet-api</artifactId>
-				<version>2.5</version>
-			</dependency>
-			<dependency>
-				<groupId>c3p0</groupId>
-				<artifactId>c3p0</artifactId>
-				<version>0.9.1.2</version>
-			</dependency>
-			<dependency>
-				<groupId>org.aspectj</groupId>
-				<artifactId>aspectjrt</artifactId>
-				<version>1.5.4</version>
-			</dependency>
-			<dependency>
-				<groupId>org.aspectj</groupId>
-				<artifactId>aspectjweaver</artifactId>
-				<version>1.5.4</version>
-			</dependency>
-			<dependency>
-				<groupId>postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>8.3-603.jdbc4</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-crud-hibernate</artifactId>
-				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-authorization-tapestry-ioc</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>generic-authorization</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>image</artifactId>
-				<version>1.0-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>br.com.arsmachina</groupId>
-				<artifactId>tapestry-security</artifactId>
-				<version>1.0-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.annotation</groupId>
-				<artifactId>jsr250-api</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>net.sf.ehcache</groupId>
-				<artifactId>ehcache</artifactId>
-				<version>1.6.0</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.mongojack</groupId>
-			    <artifactId>mongojack</artifactId>
-			    <version>2.0.0-RC5</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.persistence</groupId>
-				<artifactId>persistence-api</artifactId>
-				<version>1.0.2</version>
-			</dependency>
-			<dependency>
-				<groupId>org.tynamo</groupId>
-				<artifactId>tapestry-security</artifactId>
-				<version>0.5.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.tynamo.security</groupId>
-				<artifactId>tynamo-federatedaccounts-core</artifactId>
-				<version>${tynamo-federated-accounts-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.tynamo.security</groupId>
-				<artifactId>tynamo-federatedaccounts-facebook</artifactId>
-				<version>${tynamo-federated-accounts-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.tynamo.security</groupId>
-				<artifactId>tynamo-federatedaccounts-twitter</artifactId>
-				<version>${tynamo-federated-accounts-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.tynamo.security</groupId>
-				<artifactId>tynamo-federatedaccounts-pac4jbasedoauth</artifactId>
-				<version>${tynamo-federated-accounts-release-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-core</artifactId>
-				<version>${logback-release-version}</version>
-			</dependency>			
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>${logback-release-version}</version>
-			</dependency>			
-			<dependency>
-				<groupId>org.mindrot</groupId>
-				<artifactId>jbcrypt</artifactId>
-				<version>0.3m</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-validator</artifactId>
-<!-- 				<version>5.0.1.Final</version> -->
-				<version>4.0.0.GA</version>
-			</dependency>
-			<dependency>
-			    <groupId>javax.cache</groupId>
-			    <artifactId>cache-api</artifactId>
-			    <version>${jcache-release-version}</version>
-			</dependency>			
-			<dependency>
-			    <groupId>org.jsr107.ri</groupId>
-			    <artifactId>cache-ri-impl</artifactId>
-			    <version>${jcache-release-version}</version>
-			</dependency>			
-		</dependencies>
-	</dependencyManagement>
-	<build>
-		<plugins>
-			<!--
-				<plugin> <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId> <version>2.0-beta-7</version>
-				</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-report-plugin</artifactId>
-				<version>2.0.1</version> </plugin> <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-install-plugin</artifactId> <version>2.2</version>
-				</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId> <version>2.2</version>
-				</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.5-SNAPSHOT</version> </plugin> <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId> <version>2.2</version> </plugin>
-			-->
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 				<artifactId>maven-compiler-plugin</artifactId> -->
-<!-- 				<version>2.4</version> -->
-<!-- 				<configuration> -->
-<!-- 					<source>1.5</source> -->
-<!-- 					<target>1.5</target> -->
-<!-- 					<optimize>true</optimize> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<warSourceExcludes>**/CVS</warSourceExcludes>
-					<warSourceExcludes>**/.svn</warSourceExcludes>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 				<artifactId>maven-javadoc-plugin</artifactId> -->
-<!-- 				<configuration> -->
-<!-- 					<links> -->
-<!-- 						<link>http://java.sun.com/j2se/1.5.0/docs/api/</link> -->
-<!-- 					</links> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
-			<!--
-				<plugin> <groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId> <executions> <execution>
-				<id>clean</id> <phase>test</phase> <goals> <goal>clean</goal> </goals>
-				</execution> </executions> </plugin>
-			-->
-		</plugins>
-	</build>
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jxr-plugin</artifactId>
-				<configuration>
-					<linkJavadoc>true</linkJavadoc>
-					<javadocDir>../apidocs</javadocDir>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clover-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<linksource>true</linksource>
-					<links>
-						<link> http://java.sun.com/j2se/1.5.0/docs/api/ </link>
-						<link> http://tapestry.apache.org/tapestry5/apidocs </link>
-					</links>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>dependencies</report>
-							<report>license</report>
-							<report>scm</report>
-							<report>project-team</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-		</plugins>
-	</reporting>
-<!-- 	<repositories> -->
-<!-- 		<repository> -->
-<!-- 			<id>maven</id> -->
-<!-- 			<name>Maven</name> -->
-<!-- 			<url>http://repo1.maven.org/maven2</url> -->
-<!-- 		</repository> -->
-<!-- 		<repository> -->
-<!-- 			<id>apache-staging</id> -->
-<!-- 			<name>Apache staging</name> -->
-<!-- 			<url>https://repository.apache.org/content/groups/staging</url> -->
-<!-- 		</repository> -->
-<!-- 		<repository> -->
-<!-- 			<id>jboss</id> -->
-<!-- 			<name>JBoss (and Hibernate)</name> -->
-<!-- 			<url>http://repository.jboss.org/nexus/content/repositories/releases/</url> -->
-<!-- 		</repository> -->
-<!-- 		<repository> -->
-<!-- 			<id>spring-maven-milestone</id> -->
-<!-- 			<name>Springframework Maven Repository</name> -->
-<!-- 			<url>http://s3.amazonaws.com/maven.springframework.org/milestone</url> -->
-<!-- 		</repository> -->
-<!-- 		<repository> -->
-<!-- 			<id>spring-maven-snapshot</id> -->
-<!-- 			<snapshots> -->
-<!-- 				<enabled>true</enabled> -->
-<!-- 			</snapshots> -->
-<!-- 			<name>Springframework Maven SNAPSHOT Repository</name> -->
-<!-- 			<url>http://s3.amazonaws.com/maven.springframework.org/snapshot</url> -->
-<!-- 		</repository> -->
-<!-- 		<repository> -->
-<!-- 			<id>com.springsource.repository.bundles.external</id> -->
-<!-- 			<name> SpringSource Enterprise Bundle Repository - External Releases </name> -->
-<!-- 			<url>http://repository.springsource.com/maven/bundles/external</url> -->
-<!-- 		</repository> -->
-<!-- 		<repository> -->
-<!-- 			<id>antisamy.snapshot</id> -->
-<!-- 			<url>http://antisamy.happyfern.com/maven2-snapshot</url> -->
-<!-- 		</repository> -->
-<!-- 	</repositories> -->
-<!-- 	<distributionManagement> -->
-<!-- 		<site> -->
-<!-- 			<id>arsmachina.site</id> -->
-<!-- 			<name>Ars Machina Project site</name> -->
-<!-- 			<url>scp://arsmachina.com.br/var/www/arsmachina/project/maven</url> -->
-<!-- 		</site> -->
-<!-- 		<repository> -->
-<!-- 			<id>arsmachina.release.repository</id> -->
-<!-- 			<name>Ars Machina Project release repository</name> -->
-<!-- 			<url>scp://arsmachina.com.br/var/www/arsmachina/project/maven/releases</url> -->
-<!-- 		</repository> -->
-<!-- 		<snapshotRepository> -->
-<!-- 			<id>arsmachina.release.repository</id> -->
-<!-- 			<name>Ars Machina Project release repository</name> -->
-<!-- 			<url>scp://arsmachina.com.br/var/www/arsmachina/project/maven/snapshots</url> -->
-<!-- 		</snapshotRepository> -->
-<!-- 	</distributionManagement> -->
-	<properties>
-		<spring-release-version>2.5.6</spring-release-version>
-		<tapestry-release-version>5.4-alpha-29</tapestry-release-version>
-		<logback-release-version>1.0.13</logback-release-version>
-		<jcache-release-version>0.8</jcache-release-version>
-		<tynamo-federated-accounts-release-version>0.4.5</tynamo-federated-accounts-release-version>
-	</properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.com.arsmachina</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <inceptionYear>2008</inceptionYear>
+    <name>Parent Maven 2 project for Ars Machina subprojects</name>
+    <version>1.2.16-SNAPSHOT</version>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    <description>
+        The Ars Machina Project is a collection of packages with two
+        general goals: to reduce the amount of code needed to implement an application
+        and to suggest some standards to the software architecture and naming of
+        classes and interfaces.
+    </description>
+    <url>http://www.arsmachina.com.br/project</url>
+    <modules>
+        <!--		<module>../generic-dao</module> -->
+        <!--		<module>../generic-dao-hibernate</module>-->
+        <!--		<module>../generic-controller</module>-->
+        <!--		<module>../application-module</module>-->
+        <!--		<module>../application-module-hibernate</module>-->
+        <!--		<module>../generic-controller-spring</module>-->
+        <!--		<module>../application-module-spring</module>-->
+        <!--		<module>../generic-authentication</module>-->
+        <!--		<module>../generic-authentication-hibernate</module>-->
+        <!--		<module>../generic-authentication-module</module>-->
+        <!--		<module>../generic-authorization</module>-->
+        <!--		<module>../generic-authorization-tapestry-ioc</module>-->
+        <!--		<module>../tapestry-crud</module>-->
+        <!--		<module>../mailer</module>-->
+        <!--		<module>../image</module>-->
+        <!--		<module>../brasil</module>-->
+        <!--		<module>../brasil-tapestry</module>-->
+        <!--		<module>../tapestry-crud-hibernate-validator</module>-->
+        <!--		<module>../tapestry-access-logger</module>-->
+        <!--		<module>../tapestry-access-logger-hibernate</module>-->
+        <!--		<module>../tapestry-crud-hibernate</module>-->
+        <!--		<module>../validators</module>-->
+        <!--		<module>../tapestry-security</module>-->
+        <!--
+        <module>../example</module>
+        -->
+    </modules>
+    <organization>
+        <name>Ars Machina Tecnologia da Informação Ltda.</name>
+        <url>http://arsmachina.com.br</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Apache Software License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/thiagohp/parent.git</connection>
+        <developerConnection>scm:git:https://github.com/thiagohp/parent.git</developerConnection>
+        <url>https://github.com/thiagohp/parent.git</url>
+    </scm>
+    <!-- 	<mailingLists> -->
+    <!-- 		<mailingList> -->
+    <!-- 			<name /> -->
+    <!-- 			<subscribe /> -->
+    <!-- 			<unsubscribe /> -->
+    <!-- 			<post /> -->
+    <!-- 			<archive>http://sourceforge.net/mailarchive/forum.php?forum_name=ars-machina-users</archive> -->
+    <!-- 		</mailingList> -->
+    <!-- 	</mailingLists> -->
+    <issueManagement>
+        <url>https://github.com/thiagohp/parent/issues</url>
+    </issueManagement>
+    <developers>
+        <developer>
+            <id>thiagohp</id>
+            <name>Thiago H. de Paula Figueiredo</name>
+            <email>thiagohp at gmail dot com</email>
+            <url>http://www.arsmachina.com.br/thiago</url>
+            <roles>
+                <role>Creator</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>GMT-3</timezone>
+        </developer>
+    </developers>
+    <dependencyManagement>
+        <dependencies>
+            <!--====================================================-->
+            <!-- === br.com.arsmachina ===================== -->
+            <!--====================================================-->
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-authorization-tapestry-ioc</artifactId>
+                <version>${bca-generic-authorization-tapestry-ioc-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-authorization</artifactId>
+                <version>${bca-generic-authorization-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>mailer</artifactId>
+                <version>${bca-mailer-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>colloquium</artifactId>
+                <version>${bca-colloquium-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>esculentus</artifactId>
+                <version>${bca-esculentus-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>brasil</artifactId>
+                <version>${bca-brasil-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>brasil-tapestry</artifactId>
+                <version>${bca-brasil-tapestry-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>validators</artifactId>
+                <version>${bca-validators-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>image</artifactId>
+                <version>${bca-image-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-security</artifactId>
+                <version>${bca-tapestry-security-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-crud-hibernate</artifactId>
+                <version>${bca-tapestry-crud-hibernate-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-url-rewriter</artifactId>
+                <version>${bca-tapestry-url-rewriter-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-syntax-highlighter</artifactId>
+                <version>${bca-tapestry-syntax-highlighter-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-wymeditor</artifactId>
+                <version>${bca-tapestry-wymeditor-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-rss</artifactId>
+                <version>${bca-tapestry-rss-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-authentication-module</artifactId>
+                <version>${bca-generic-authentication-module-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>application-module-hibernate</artifactId>
+                <version>${bca-application-module-hibernate-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>application-module-spring</artifactId>
+                <version>${bca-application-module-spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>application-module</artifactId>
+                <version>${bca-application-module-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-authentication</artifactId>
+                <version>${bca-generic-authentication-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-access-logger</artifactId>
+                <version>${bca-tapestry-access-logger-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-access-logger-hibernate</artifactId>
+                <version>${bca-tapestry-access-logger-hibernate-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-spring-security-generic-authentication</artifactId>
+                <version>${bca-tapestry-spring-security-generic-authentication-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-authentication-hibernate</artifactId>
+                <version>${bca-generic-authentication-hibernate-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-dao</artifactId>
+                <version>${bca-generic-dao-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-dao-hibernate</artifactId>
+                <version>${bca-generic-dao-hibernate-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-controller</artifactId>
+                <version>${bca-generic-controller-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>generic-controller-spring</artifactId>
+                <version>${bca-generic-controller-spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-crud</artifactId>
+                <version>${bca-tapestry-crud-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.arsmachina</groupId>
+                <artifactId>tapestry-crud-hibernate-validator</artifactId>
+                <version>${bca-tapestry-crud-hibernate-validator-version}</version>
+            </dependency>
+
+
+            <!--============================================================== -->
+            <!-- === tapestry, tynamo, other components and services ==========-->
+            <!--============================================================== -->
+            <dependency>
+                <groupId>org.apache.tapestry</groupId>
+                <artifactId>tapestry-core</artifactId>
+                <version>${tapestry-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tapestry</groupId>
+                <artifactId>tapestry-mongodb</artifactId>
+                <version>${tapestry-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tapestry</groupId>
+                <artifactId>tapestry-upload</artifactId>
+                <version>${tapestry-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tapestry</groupId>
+                <artifactId>tapestry-ioc</artifactId>
+                <version>${tapestry-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tapestry</groupId>
+                <artifactId>tapestry5-annotations</artifactId>
+                <version>${tapestry-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tapestry</groupId>
+                <artifactId>tapestry-beanvalidator</artifactId>
+                <version>${tapestry-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tapestry</groupId>
+                <artifactId>tapestry-spring</artifactId>
+                <version>${tapestry-spring-version}</version>
+            </dependency>
+
+            <!--tynamo-->
+            <dependency>
+                <groupId>org.tynamo</groupId>
+                <artifactId>tapestry-security</artifactId>
+                <version>${tapestry-security-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tynamo.security</groupId>
+                <artifactId>tynamo-federatedaccounts-core</artifactId>
+                <version>${tynamo-federated-accounts-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tynamo.security</groupId>
+                <artifactId>tynamo-federatedaccounts-facebook</artifactId>
+                <version>${tynamo-federated-accounts-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tynamo.security</groupId>
+                <artifactId>tynamo-federatedaccounts-twitter</artifactId>
+                <version>${tynamo-federated-accounts-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tynamo.security</groupId>
+                <artifactId>tynamo-federatedaccounts-pac4jbasedoauth</artifactId>
+                <version>${tynamo-federated-accounts-release-version}</version>
+            </dependency>
+
+            <!--others-->
+            <dependency>
+                <groupId>org.chenillekit</groupId>
+                <artifactId>chenillekit-tapestry</artifactId>
+                <version>${chenillekit-tapestry-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.tapestry</groupId>
+                        <artifactId>tapestry-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>ognl</groupId>
+                        <artifactId>ognl</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>nu.localhost.tapestry</groupId>
+                <artifactId>tapestry5-acegi</artifactId>
+                <version>${tapestry5-acegi-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.tapestry</groupId>
+                        <artifactId>tapestry-ioc</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.tapestry</groupId>
+                        <artifactId>tapestry-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.acegisecurity</groupId>
+                        <artifactId>acegi-security</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-context</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.acegisecurity</groupId>
+                        <artifactId>acegi-security-tiger</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+            <!--====================================================-->
+            <!--=== SPRING =========================================-->
+            <!--====================================================-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.javaconfig</groupId>
+                <artifactId>spring-javaconfig</artifactId>
+                <version>${spring-javaconfig-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-dao</artifactId>
+                <version>${spring-dao-version}}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-hibernate3</artifactId>
+                <version>${spring-hibernate3-version}}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring-release-version}</version>
+            </dependency>
+
+
+            <!--====================================================-->
+            <!-- === PERSISTENCE ===================== -->
+            <!--====================================================-->
+            <!--			<dependency>-->
+            <!--				<groupId>org.hibernate</groupId>-->
+            <!--				<artifactId>hibernate-annotations</artifactId>-->
+            <!--				<version>3.4.0.GA</version>-->
+            <!--				<exclusions>-->
+            <!--					<exclusion>-->
+            <!--						<groupId>org.slf4j</groupId>-->
+            <!--						<artifactId>slf4j-api</artifactId>-->
+            <!--					</exclusion>-->
+            <!--				</exclusions>-->
+            <!--			</dependency>-->
+            <!--
+                        <dependency>
+                            <groupId>org.hibernate</groupId>
+                            <artifactId>hibernate-commons-annotations</artifactId>
+                            <version>3.0.0.ga</version>
+                        </dependency>
+            -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate-core-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>net.sf.ehcache</groupId>
+                        <artifactId>ehcache</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-commons-annotations</artifactId>
+                <version>${hibernate-commons-annotations-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>hsqldb</groupId>
+                <artifactId>hsqldb</artifactId>
+                <version>${hsqldb-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${ehcache-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mongojack</groupId>
+                <artifactId>mongojack</artifactId>
+                <version>${mongojack-version}</version>
+            </dependency>
+            <!--<dependency>-->
+            <!--<groupId>javax.persistence</groupId>-->
+            <!--<artifactId>persistence-api</artifactId>-->
+            <!--<version>1.0</version>-->
+            <!--</dependency>-->
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${persistence-api-version}</version>
+            </dependency>
+
+
+            <!--====================================================-->
+            <!-- === LOGGING ===================== -->
+            <!--====================================================-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j-simple-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-release-version}</version>
+            </dependency>
+
+
+            <!--====================================================-->
+            <!-- === OTHERS ===================== -->
+            <!--====================================================-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet-api-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>c3p0</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectjrt-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjweaver-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>jsr250-api</artifactId>
+                <version>${jsr250-api-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mindrot</groupId>
+                <artifactId>jbcrypt</artifactId>
+                <version>${jbcrypt-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.cache</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>${jcache-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsr107.ri</groupId>
+                <artifactId>cache-ri-impl</artifactId>
+                <version>${jcache-release-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib-nodep</artifactId>
+                <version>${cglib-nodep-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.chenillekit</groupId>
+                <artifactId>chenillekit-quartz</artifactId>
+                <version>${chenillekit-tapestry-version}</version>
+            </dependency>
+
+
+            <!--====================================================-->
+            <!-- === TEST ===================== -->
+            <!--====================================================-->
+            <dependency>
+                <groupId>org.easymock</groupId>
+                <artifactId>easymock</artifactId>
+                <version>${easymock-version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng-version}</version>
+                <classifier>jdk15</classifier>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+
+
+
+
+
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>${jetty-maven-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin-version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jxr-plugin</artifactId>
+                    <version>${maven-jxr-plugin-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <!--
+                <plugin> <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId> <version>2.0-beta-7</version>
+                </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-report-plugin</artifactId>
+                <version>2.0.1</version> </plugin> <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId> <version>2.2</version>
+                </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId> <version>2.2</version>
+                </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.5-SNAPSHOT</version> </plugin> <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId> <version>2.2</version> </plugin>
+            -->
+            <!-- 			<plugin> -->
+            <!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+            <!-- 				<artifactId>maven-compiler-plugin</artifactId> -->
+            <!-- 				<version>2.4</version> -->
+            <!-- 				<configuration> -->
+            <!-- 					<source>1.5</source> -->
+            <!-- 					<target>1.5</target> -->
+            <!-- 					<optimize>true</optimize> -->
+            <!-- 				</configuration> -->
+            <!-- 			</plugin> -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warSourceExcludes>**/CVS</warSourceExcludes>
+                    <warSourceExcludes>**/.svn</warSourceExcludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- 			<plugin> -->
+            <!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+            <!-- 				<artifactId>maven-javadoc-plugin</artifactId> -->
+            <!-- 				<configuration> -->
+            <!-- 					<links> -->
+            <!-- 						<link>http://java.sun.com/j2se/1.5.0/docs/api/</link> -->
+            <!-- 					</links> -->
+            <!-- 				</configuration> -->
+            <!-- 			</plugin> -->
+            <!--
+                <plugin> <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId> <executions> <execution>
+                <id>clean</id> <phase>test</phase> <goals> <goal>clean</goal> </goals>
+                </execution> </executions> </plugin>
+            -->
+        </plugins>
+    </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <configuration>
+                    <linkJavadoc>true</linkJavadoc>
+                    <javadocDir>../apidocs</javadocDir>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clover-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <linksource>true</linksource>
+                    <links>
+                        <link>http://java.sun.com/j2se/1.5.0/docs/api/</link>
+                        <link>http://tapestry.apache.org/tapestry5/apidocs</link>
+                    </links>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependencies</report>
+                            <report>license</report>
+                            <report>scm</report>
+                            <report>project-team</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!--<repositories>-->
+    <!--<repository>-->
+    <!--<id>maven</id>-->
+    <!--<name>Maven</name>-->
+    <!--<url>http://repo1.maven.org/maven2</url>-->
+    <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>apache-staging</id>-->
+    <!--<name>Apache staging</name>-->
+    <!--<url>https://repository.apache.org/content/groups/staging</url>-->
+    <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>jboss</id>-->
+    <!--<name>JBoss (and Hibernate)</name>-->
+    <!--<url>http://repository.jboss.org/nexus/content/repositories/releases/</url>-->
+    <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>spring-maven-milestone</id>-->
+    <!--<name>Springframework Maven Repository</name>-->
+    <!--<url>http://s3.amazonaws.com/maven.springframework.org/milestone</url>-->
+    <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>spring-maven-snapshot</id>-->
+    <!--<snapshots>-->
+    <!--<enabled>true</enabled>-->
+    <!--</snapshots>-->
+    <!--<name>Springframework Maven SNAPSHOT Repository</name>-->
+    <!--<url>http://s3.amazonaws.com/maven.springframework.org/snapshot</url>-->
+    <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>com.springsource.repository.bundles.external</id>-->
+    <!--<name> SpringSource Enterprise Bundle Repository - External Releases </name>-->
+    <!--<url>http://repository.springsource.com/maven/bundles/external</url>-->
+    <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>antisamy.snapshot</id>-->
+    <!--<url>http://antisamy.happyfern.com/maven2-snapshot</url>-->
+    <!--</repository>-->
+    <!--</repositories>-->
+    <!-- 	<distributionManagement> -->
+    <!-- 		<site> -->
+    <!-- 			<id>arsmachina.site</id> -->
+    <!-- 			<name>Ars Machina Project site</name> -->
+    <!-- 			<url>scp://arsmachina.com.br/var/www/arsmachina/project/maven</url> -->
+    <!-- 		</site> -->
+    <!-- 		<repository> -->
+    <!-- 			<id>arsmachina.release.repository</id> -->
+    <!-- 			<name>Ars Machina Project release repository</name> -->
+    <!-- 			<url>scp://arsmachina.com.br/var/www/arsmachina/project/maven/releases</url> -->
+    <!-- 		</repository> -->
+    <!-- 		<snapshotRepository> -->
+    <!-- 			<id>arsmachina.release.repository</id> -->
+    <!-- 			<name>Ars Machina Project release repository</name> -->
+    <!-- 			<url>scp://arsmachina.com.br/var/www/arsmachina/project/maven/snapshots</url> -->
+    <!-- 		</snapshotRepository> -->
+    <!-- 	</distributionManagement> -->
+    <properties>
+
+        <!--A-->
+        <aspectjrt-version>1.5.4</aspectjrt-version>
+        <aspectjweaver-version>1.5.4</aspectjweaver-version>
+
+        <!--B-->
+        <!--bca: <groupId>br.com.arsmachina</groupId>-->
+        <bca-application-module-hibernate-version>1.1</bca-application-module-hibernate-version>
+        <bca-application-module-spring-version>1.1</bca-application-module-spring-version>
+        <bca-application-module-version>1.1</bca-application-module-version>
+        <bca-brasil-tapestry-version>1.0</bca-brasil-tapestry-version>
+        <bca-brasil-version>1.0</bca-brasil-version>
+        <bca-colloquium-version>1.0</bca-colloquium-version>
+        <bca-esculentus-version>1.0</bca-esculentus-version>
+        <bca-generic-authentication-hibernate-version>1.1</bca-generic-authentication-hibernate-version>
+        <bca-generic-authentication-module-version>1.1</bca-generic-authentication-module-version>
+        <bca-generic-authentication-version>1.1</bca-generic-authentication-version>
+        <bca-generic-authorization-tapestry-ioc-version>1.0</bca-generic-authorization-tapestry-ioc-version>
+        <bca-generic-authorization-version>1.0</bca-generic-authorization-version>
+        <bca-generic-controller-spring-version>1.1</bca-generic-controller-spring-version>
+        <bca-generic-controller-version>2.0.0</bca-generic-controller-version>
+        <bca-generic-dao-hibernate-version>1.1</bca-generic-dao-hibernate-version>
+        <bca-generic-dao-version>2.0.0</bca-generic-dao-version>
+        <bca-image-version>1.0-SNAPSHOT</bca-image-version>
+        <bca-mailer-version>1.0</bca-mailer-version>
+        <bca-tapestry-access-logger-hibernate-version>1.1</bca-tapestry-access-logger-hibernate-version>
+        <bca-tapestry-access-logger-version>1.1</bca-tapestry-access-logger-version>
+        <bca-tapestry-crud-hibernate-validator-version>1.1</bca-tapestry-crud-hibernate-validator-version>
+        <bca-tapestry-crud-hibernate-version>1.1</bca-tapestry-crud-hibernate-version>
+        <bca-tapestry-crud-version>1.1</bca-tapestry-crud-version>
+        <bca-tapestry-rss-version>0.0.1</bca-tapestry-rss-version>
+        <bca-tapestry-security-version>1.0-SNAPSHOT</bca-tapestry-security-version>
+        <bca-tapestry-spring-security-generic-authentication-version>1.1</bca-tapestry-spring-security-generic-authentication-version>
+        <bca-tapestry-syntax-highlighter-version>0.0.1</bca-tapestry-syntax-highlighter-version>
+        <bca-tapestry-url-rewriter-version>2.0.0</bca-tapestry-url-rewriter-version>
+        <bca-tapestry-wymeditor-version>0.1.0</bca-tapestry-wymeditor-version>
+        <bca-validators-version>1.0</bca-validators-version>
+
+
+        <!--C-->
+        <c3p0-version>0.9.1.2</c3p0-version>
+        <cglib-nodep-version>2.1_3</cglib-nodep-version>
+        <chenillekit-tapestry-version>1.1.0</chenillekit-tapestry-version>
+
+
+        <!--E-->
+        <easymock-version>3.2</easymock-version>
+        <ehcache-version>1.6.0</ehcache-version>
+
+        <!--F-->
+        <freemarker-version>2.3.14</freemarker-version>
+
+        <!--H-->
+        <hibernate-commons-annotations-version>3.3.0.ga</hibernate-commons-annotations-version>
+        <hibernate-core-version>3.6.0.Final</hibernate-core-version>
+        <hibernate-validator-version>4.0.0.GA</hibernate-validator-version>
+        <hsqldb-version>1.8.0.7</hsqldb-version>
+
+
+        <!--J-->
+        <jbcrypt-version>0.3m</jbcrypt-version>
+        <jcache-release-version>0.8</jcache-release-version>
+        <jsr250-api-version>1.0</jsr250-api-version>
+
+        <!--L-->
+        <logback-release-version>1.0.13</logback-release-version>
+
+        <!--M-->
+        <mongojack-version>2.0.0-RC5</mongojack-version>
+
+        <!--P-->
+        <persistence-api-version>1.0.2</persistence-api-version>
+        <postgresql-version>8.3-603.jdbc4</postgresql-version>
+
+
+        <!--S-->
+        <servlet-api-version>2.5</servlet-api-version>
+        <slf4j-simple-version>1.5.2</slf4j-simple-version>
+        <spring-dao-version>2.0.8</spring-dao-version>
+        <spring-hibernate3-version>2.0.8</spring-hibernate3-version>
+        <spring-javaconfig-version>1.0.0.m3</spring-javaconfig-version>
+        <spring-release-version>2.5.6</spring-release-version>
+
+
+        <!--T-->
+        <tapestry-release-version>LATEST</tapestry-release-version>
+        <tapestry-security-version>0.5.1</tapestry-security-version>
+        <tapestry-spring-version>5.0.18</tapestry-spring-version>
+        <tapestry5-acegi-version>1.1.1-SNAPSHOT</tapestry5-acegi-version>
+        <testng-version>5.5</testng-version>
+        <tynamo-federated-accounts-release-version>0.4.5</tynamo-federated-accounts-release-version>
+
+
+
+
+        <!--====================================================-->
+        <!--===  MAVEN PLUGINS  ================================-->
+        <!--====================================================-->
+        <jetty-maven-plugin-version>9.4.7.v20170914</jetty-maven-plugin-version>
+        <maven-compiler-plugin-version>3.1</maven-compiler-plugin-version>
+        <maven-jxr-plugin-version>2.5</maven-jxr-plugin-version>
+        <maven-source-plugin-version>3.0.1</maven-source-plugin-version>
+        <maven-war-plugin-version>2.6</maven-war-plugin-version>
+
+    </properties>
+
+
 </project>
