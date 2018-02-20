@@ -733,7 +733,7 @@
 <!-- 	</distributionManagement> -->
 	<properties>
 		<spring-release-version>2.5.6</spring-release-version>
-		<tapestry-release-version>5.4-alpha-29</tapestry-release-version>
+		<tapestry-release-version>5.4.3</tapestry-release-version>
 		<logback-release-version>1.0.13</logback-release-version>
 		<jcache-release-version>0.8</jcache-release-version>
 		<tynamo-federated-accounts-release-version>0.4.5</tynamo-federated-accounts-release-version>
